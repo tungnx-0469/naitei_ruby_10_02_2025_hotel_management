@@ -89,15 +89,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_03_27_172927) do
     t.index ["room_type_id"], name: "index_requests_room_types_on_room_type_id"
   end
 
-  create_table "requests_rooms", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "request_id", null: false
-    t.bigint "rooms_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["request_id"], name: "index_requests_rooms_on_request_id"
-    t.index ["rooms_id"], name: "index_requests_rooms_on_rooms_id"
-  end
-
   create_table "reviews", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.text "content"

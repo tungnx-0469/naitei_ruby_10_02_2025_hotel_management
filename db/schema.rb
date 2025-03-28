@@ -154,8 +154,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_03_27_172927) do
   add_foreign_key "requests", "users"
   add_foreign_key "requests_room_types", "requests"
   add_foreign_key "requests_room_types", "room_types"
-  add_foreign_key "requests_rooms", "requests"
-  add_foreign_key "requests_rooms", "rooms", column: "rooms_id"
   add_foreign_key "reviews", "users"
   add_foreign_key "rooms", "room_types"
   add_foreign_key "stay_ats", "requests"

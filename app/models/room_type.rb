@@ -1,5 +1,5 @@
 class RoomType < ApplicationRecord
-  PERMITTED_PARAMS = %i(name description price view).freez + [{images: []},
+  PERMITTED_PARAMS = %i(name description price view).freeze + [{images: []},
   {devices_attributes: Device::PERMITTED_PARAMS}].freeze
 
   has_many :rooms, dependent: :destroy
